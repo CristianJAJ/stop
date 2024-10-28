@@ -20,6 +20,12 @@
 
 <p> La arquitectura de la base de datos es el diseño y organización de los componentes de un sistema de gestión de bases de datos, que incluye estructuras de datos y relaciones, garantizando eficiencia y escalabilidad  como se muestra a continuacion.</p>
 
+<ul>
+    <li>Organización y Claridad de los Datos (1NF, 2NF, 3NF)</li>
+    <p>1NF (Primera Forma Normal): Todos los atributos en cada tabla contienen valores atómicos. Por ejemplo, en la tabla Usuarios, los datos de cada usuario (nombre, correo electrónico, teléfono, curps, apellidos) se almacenan en campos individuales, garantizando que cada campo contenga un único valor. Esto asegura que no hay listas ni conjuntos dentro de los campos, manteniendo la integridad de los datos.</p>
+    <p>2NF (Segunda Forma Normal): Cada atributo no clave depende completamente de la clave primaria de su tabla. todos los detalles del usiario, el nombre y el curp y los correos dependen del identificador(Id). Esto evita dependencias parciales y asegura que cada campo contribuya directamente a buscar a las personas mas rapido.</p>
+    <p>3NF (Tercera Forma Normal):No existen dependencias transitivas en ninguna de las tablas. Por ejemplo, en la tabla CURP y CORREO todos los atributos dependen directamente de la clave primaria (Id), y no hay atributos no clave que dependen de otros atributos no clave. Además, los datos del usuario evita duplicación y mantiene la consistencia, asegurando que esté relacionado con un usuario a través de la clave  (ID_CURP Y Correo_ID).</p>
+</ul>
      <h4>Tabla "usuario": </h4>
 
        <li>Esta tabla almacena la información de los usuarios como su nombre, apellido y número de teléfono. </li>
