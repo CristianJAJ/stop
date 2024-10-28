@@ -46,7 +46,8 @@
         <p> GO</p>
     
             <p> CREATE TABLE usuario (</p>
-                <p> Nombre_ID INT PRIMARY KEY IDENTITY(1,1),</p>
+            <p> Num_ID INT PRIMARY KEY IDENTITY(1,1),</p>
+                <p> Nombre VARCHAR(100) NOT NULL</p>
                 <p> 2DO Nombre VARCHAR(100) NOT NULL,</p>
                 <p> Apellido paterno VARCHAR(50) NOT NULL,</p>
                 <p> Apellido materno VARCHAR(50) NOT NULL, </p>
@@ -69,7 +70,7 @@
     <pre>
 -- Registros de usuario
 INSERT INTO usuario (Nombre, 2do Nombre, Apellido paterno, Apellido materno, CURP, Telefono, Correo) VALUES
-('juan', 'carlos', 'lopez', 'lopez','GODK980721MYNJVL66',7723434372, 'juan.lopez@example.com'),
+('1','juan', 'carlos', 'lopez', 'lopez','GODK980721MYNJVL66',7723434372, 'juan.lopez@example.com'),
 
 
 -- Registros de CURP
