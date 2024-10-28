@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <ul></ul>
+    <li><a href="./../index.html">[Principal]</a></li>
+    <li><a href="./../Subsistemas/historial_de_usuarios.html">[Servicios]</a></li>
+</ul>
+</ul>
+<h1>Diagrama de la base de datos del subsistema</h1>
+
+<img src="../imagenes/DiagramaBD.png" alt="" width="600">
+
+
+<h2>Descripción de la Arquitectura de la Base de Datos</h2>
+
+<p> La arquitectura de la base de datos es el diseño y organización de los componentes de un sistema de gestión de bases de datos, que incluye estructuras de datos y relaciones, garantizando eficiencia y escalabilidad  como se muestra a continuacion.</p>
+
+     <h4>Tabla "usuario": </h4>
+
+       <li>Esta tabla almacena la información de los usuarios como su nombre, apellido y número de teléfono. </li>
+       <li>Los campos "Nombre_ID" y "CURP" son relevantes para poder identficar a usuario.</li>
+
+
+     <h4>Tabla "CURP": </h4>
+
+       <li>Esta tabla guarda los CURP de todos los usuario </li>
+       <li>Esto permite tener un registro de tods las curps con ID_CURP se tendra acceso rapido al usuario.</li>
+
+
+     <h4>Tabla "correo": </h4>
+
+       <li>Esta tabla se guarda el correo del usuario para poder contactar con el en caso de algun problema </li>
+       <li>El campo "Correo_ID" es fundamental para poder encontrar el correo del al usuario mas rapidamente</li>
+
+    <h4>Código SQL</h4>
+
+    <p>DATABASE historial_de_usuarios;</p>
+    <p> GO </p>
+    
+    <p> USE historial_de_usuarios;</p>
+        <p> GO</p>
+    
+            <p> CREATE TABLE usuario (</p>
+                <p> Nombre_ID INT PRIMARY KEY IDENTITY(1,1),</p>
+                <p> 2DO Nombre VARCHAR(100) NOT NULL,</p>
+                <p> Apellido paterno VARCHAR(50) NOT NULL,</p>
+                <p> Apellido materno VARCHAR(50) NOT NULL, </p>
+                <p>CURP  INT NULL,</p>
+                <p> Telefono (50) NOT NULL,</p>
+                <p> Correo(50) NOT NULL,</p>
+                <p> );</p>
+    
+                <p>CREATE TABLE CURP (</p>
+                <p>ID_CURP INT PRIMARY KEY IDENTITY(1,1),</p>
+                <p>CURP  INT NULL,</p>
+                <p>);</p>
+    
+                <p>CREATE TABLE correo(</p>
+                <p>Correo_ID INT PRIMARY KEY IDENTITY(1,1),</p>
+                <p> CORREO INT NULL,</p>
+    <p>);</p>
+    </p> 
+
+</body>
+</html>
